@@ -6,8 +6,8 @@ public class Exercise02Test {
     @Test
     public void sumNumberTest_OK(){
         final Exercise02 exercise02 = new Exercise02();
-        assert(exercise02.sumNumbers("abc 123 xyz") == 123);
-        assert(exercise02.sumNumbers("aa 11 b 33") == 44);
+        assert(exercise02.sumNumbers("abc123xyz") == 123);
+        assert(exercise02.sumNumbers("aa11b33") == 44);
         assert(exercise02.sumNumbers("7 11") == 18);
         assert(exercise02.sumNumbers("Chocolate") == 0);
         assert(exercise02.sumNumbers("5hoco1a1e") == 7);
