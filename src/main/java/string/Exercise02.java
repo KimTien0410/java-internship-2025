@@ -1,6 +1,7 @@
 package string;
 
 public class Exercise02 {
+
     public int sumNumbers(String str) {
         int sum = 0;
         final StringBuilder builder = new StringBuilder();
