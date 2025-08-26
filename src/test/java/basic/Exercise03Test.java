@@ -9,5 +9,6 @@ public class Exercise03Test {
     void testAnalyzeNumber() {
         final Exercise03 exercise03 = new Exercise03();
         assertEquals("2*11", exercise03.analyzeNumber(22).toString());
+        assertEquals("2*2*2*3", exercise03.analyzeNumber(24).toString());
     }
 }
