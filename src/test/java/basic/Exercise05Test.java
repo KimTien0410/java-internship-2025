@@ -13,6 +13,7 @@ public class Exercise05Test {
         assertEquals(6, exercise05.factorial(3));
         assertEquals(2, exercise05.factorial(2));
         assertEquals(1, exercise05.factorial(1));
-        assertEquals(1, exercise05.factorial(1));
+        assertEquals(1, exercise05.factorial(0));
+        assertThrows(IllegalArgumentException.class,(()-> exercise05.factorial(-1)),"Number must be non-negative");
     }
 }
