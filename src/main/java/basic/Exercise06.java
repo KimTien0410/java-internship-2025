@@ -1,7 +1,8 @@
 package basic;
 
 public class Exercise06 {
-    public String readMonth(int month) {
+
+    public String readMonth(final int month) {
         return switch (month) {
             case 1 -> "January";
             case 2 -> "February";
