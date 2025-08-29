@@ -10,7 +10,9 @@ public class Exercise02 {
 
             if (array[mid] == value) {
                 return mid;
-            } else if (array[mid] < value) {
+            }
+
+            if (array[mid] < value) {
                 left = mid + 1;
             } else {
                 right = mid - 1;
