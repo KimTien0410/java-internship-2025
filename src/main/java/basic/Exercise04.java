@@ -1,31 +1,16 @@
 package basic;
 
 public class Exercise04 {
-
-    public int fibonacci(final int n) {
-        if (n < 0) {
-            throw new IllegalArgumentException("Input cannot be negative");
+    public String fibonacciArray(int max) {
+        StringBuilder result = new StringBuilder();
+        int a = 1, b = 1;
+        result.append(a);
+        while (b < max) {
+            result.append(" ").append(b);
+            int next = a + b;
+            a = b;
+            b = next;
         }
-        if (n <= 1) {
-            return n;
-        }
-
-        return fibonacci(n - 1) + fibonacci(n - 2);
-    }
-
-    public String fibonacciArray(int n) {
-
-        if (n < 0) {
-            throw new IllegalArgumentException("Input cannot be negative");
-        }
-        final StringBuffer result = new StringBuffer();
-       int i = 1;
-
-        while( fibonacci(i) < n ){
-            result.append(fibonacci(i)).append(" ");
-            i++;
-        }
-        result.deleteCharAt(result.length()-1);
         return result.toString();
     }
 }
