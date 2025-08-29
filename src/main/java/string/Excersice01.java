@@ -1,0 +1,19 @@
+package string;
+
+public class Excersice01 {
+    public boolean isSymmetric(String text) {
+        if (text == null || text.isEmpty()) {
+            return true;
+        }
+        int left = 0;
+        int right = text.length() - 1;
+        while (left < right) {
+            if (text.charAt(left) != text.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+}
