@@ -1,13 +1,13 @@
 package array;
 
 public class Exercise05 {
-    public int searchX(int[] array){
-        int lengthReal = array.length + 1;
-        int sum = (1 + lengthReal) * lengthReal / 2;
+    public int searchX(final int[] array){
+        int realArrayLength = array.length + 1;
+        int expectedSum = (1 + realArrayLength) * realArrayLength / 2;
         int sumArray = 0;
         for(int i : array){
             sumArray += i;
         }
-        return sum - sumArray;
+        return expectedSum - sumArray;
     }
 }
