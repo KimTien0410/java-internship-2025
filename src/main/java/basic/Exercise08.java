@@ -1,25 +1,7 @@
 package basic;
 
 public class Exercise08 {
-
-    public int toDecimal(String binary) {
-        int decimal = 0;
-        int length = binary.length();
-
-        for (int i = 0; i < length; i++) {
-            char bit = binary.charAt(length - 1 - i);
-            if (bit == '1') {
-                decimal += Math.pow(2, i);
-            } else if (bit != '0') {
-                throw new IllegalArgumentException("Invalid binary number");
-            }
-        }
-
-        return decimal;
-    }
-
-    public String binaryToRomanNumerals(String binary) {
-        int number = toDecimal(binary);
+    public String toRomanNumerals(int number) {
         if (number <= 0 || number > 3999) {
             throw new IllegalArgumentException("Number out of range (1-3999)");
         }
