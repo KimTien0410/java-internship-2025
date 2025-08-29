@@ -2,7 +2,7 @@ package basic;
 
 public class Exercise07 {
     public String toBinary(int n) {
-        StringBuilder binary = new StringBuilder();
+        final StringBuilder binary = new StringBuilder();
 
         if (n == 0) {
             return "0";
@@ -16,7 +16,7 @@ public class Exercise07 {
     }
 
     public int toDecimalReverse(int n) {
-        StringBuilder binaryStr = new StringBuilder(toBinary(n));
+        final StringBuilder binaryStr = new StringBuilder(toBinary(n));
         binaryStr.reverse();
         int decimal = 0;
         int length = binaryStr.length();
@@ -27,7 +27,6 @@ public class Exercise07 {
                 decimal += Math.pow(2, i);
             }
         }
-
         return decimal;
     }
 }
