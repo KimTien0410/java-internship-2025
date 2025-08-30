@@ -15,5 +15,7 @@ class Exercise02Test {
         assertEquals(1, exercise02.sumDigits(1));
         assertEquals(9, exercise02.sumDigits(9));
         assertEquals(10, exercise02.sumDigits(19));
+        assertEquals(27, exercise02.sumDigits(999));
+        assertEquals(0, exercise02.sumDigits(-9));
     }
 }
