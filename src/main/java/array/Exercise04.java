@@ -2,12 +2,14 @@ package array;
 
 public class Exercise04 {
     public int[] mergeSortedArrays(int[] array1, int[] array2) {
-        int n1 = array1.length;
-        int n2 = array2.length;
-        int[] result = new int[n1 + n2];
-        int i = 0, j = 0, k = 0;
+        int length1 = array1.length;
+        int length2 = array2.length;
+        int[] result = new int[length1 + length2];
+        int i = 0;
+        int j = 0;
+        int k = 0;
 
-        while (i < n1 && j < n2) {
+        while (i < length1 && j < length2) {
             if (array1[i] < array2[j]) {
                 result[k++] = array1[i++];
             } else {
@@ -15,11 +17,11 @@ public class Exercise04 {
             }
         }
 
-        while (i < n1) {
+        while (i < length1) {
             result[k++] = array1[i++];
         }
 
-        while (j < n2) {
+        while (j < length2) {
             result[k++] = array2[j++];
         }
         return result;
