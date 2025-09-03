@@ -5,4 +5,4 @@
 + Có phương thức trừu tượng --- Không          --- Có thể        --- Có thể (Mặc định)
 + Có phương thức có thân hàm --- Có thể        --- Có thể        --- (default, static,từ Java 8 trở đi)
 + Kế thừa                   --- Kế thừa đơn    --- Kế thừa đơn   --- Kế thừa đa (implements nhiều interface)
-+ Mục đích sử dụng          --- Mô tả đối tượng cụ thể --- Mô tả đối tượng chung --- Mô tả hành vi chung
++ Mục đích sử dụng          --- Định nghĩa và cài đặt đầy đủ logic --- Mô tả đối tượng chung --- Mô tả hành vi chung
