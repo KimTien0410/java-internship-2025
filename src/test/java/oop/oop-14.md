@@ -1,0 +1,4 @@
+14. Từ khoá super có tác dụng gì, khi nào thì ta bắt buộc phải dùng nó?
+=> Từ khoá super trong Java được sử dụng để tham chiếu đến lớp cha (superclass) của một lớp con (subclass). Nó có hai tác dụng chính:
++ Gọi constructor của lớp cha: Khi một lớp con kế thừa từ một lớp cha, constructor của lớp con có thể sử dụng từ khoá super để gọi constructor của lớp cha và khởi tạo các thuộc tính của lớp cha trước khi thực hiện các thao tác trong constructor của lớp con.
++ Truy cập các phương thức và thuộc tính của lớp cha: Từ khoá super cũng có thể được sử dụng để truy cập các phương thức và thuộc tính của lớp cha khi chúng bị che khuất (overridden) bởi lớp con.
