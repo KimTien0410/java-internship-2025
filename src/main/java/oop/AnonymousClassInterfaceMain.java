@@ -10,6 +10,7 @@ public class AnonymousClassInterfaceMain {
 interface Bird2{
     void fly();
 }
+
 class Tester2{
     public void testInterface() {
         Bird bird = new Bird() {

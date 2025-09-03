@@ -5,8 +5,8 @@ public class AnonymousClassAbstractMain {
         Tester tester = new Tester();
         tester.testAbstract();
     }
-
 }
+
 abstract class Bird{
     abstract void fly();
 }
