@@ -3,12 +3,12 @@ package basic;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class Exercise08Test {
-
+    final Exercise08 exercise08 = new Exercise08();
     @Test
     void testToRomanNumerals() {
-        final Exercise08 exercise08 = new Exercise08();
         assertEquals("I", exercise08.toRomanNumerals(1));
         assertEquals("II", exercise08.toRomanNumerals(2));
         assertEquals("III", exercise08.toRomanNumerals(3));
@@ -29,21 +29,9 @@ public class Exercise08Test {
     }
     @Test
     void testToRomanNumerals_InvalidInput() {
-        final Exercise08 exercise08 = new Exercise08();
-        try {
-            exercise08.toRomanNumerals(0);
-        } catch (IllegalArgumentException e) {
-            assertEquals("Number out of range (1-3999)", e.getMessage());
-        }
-        try {
-            exercise08.toRomanNumerals(4000);
-        } catch (IllegalArgumentException e) {
-            assertEquals("Number out of range (1-3999)", e.getMessage());
-        }
-        try {
-            exercise08.toRomanNumerals(-5);
-        } catch (IllegalArgumentException e) {
-            assertEquals("Number out of range (1-3999)", e.getMessage());
-        }
+        assertThrows(IllegalArgumentException.class, () -> exercise08.toRomanNumerals(-1));
+        assertThrows(IllegalArgumentException.class, () -> exercise08.toRomanNumerals(0));
+        assertThrows(IllegalArgumentException.class, () -> exercise08.toRomanNumerals(4000));
+        assertThrows(IllegalArgumentException.class, () -> exercise08.toRomanNumerals(-10));
     }
 }
