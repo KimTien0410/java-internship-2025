@@ -4,3 +4,4 @@
 * Field: Tương tự như biến, một field (thuộc tính của lớp) được khai báo với từ khoá final không thể thay đổi giá trị sau khi đã được khởi tạo. Điều này đảm bảo rằng giá trị của field đó sẽ không bị thay đổi trong suốt vòng đời của đối tượng.
 * Parameter của hàm (Method Parameter): Khi một tham số của hàm được khai báo với từ khoá final, giá trị của tham số đó không thể bị thay đổi trong thân hàm. Điều này giúp bảo vệ tham số khỏi việc bị thay đổi vô tình trong quá trình thực thi hàm.
 * Method: Khi một phương thức được khai báo với từ khoá final, phương thức đó không thể bị ghi đè (override) trong các lớp con. Điều này đảm bảo rằng hành vi của phương thức sẽ không bị thay đổi bởi các lớp con.
+* Class: Khi một lớp được khai báo với từ khoá final, lớp đó không thể bị kế thừa (inherit) bởi bất kỳ lớp nào khác. Điều này giúp bảo vệ lớp khỏi việc bị extends hoặc thay đổi hành vi thông qua kế thừa.
