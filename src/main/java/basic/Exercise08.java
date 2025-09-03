@@ -1,11 +1,11 @@
 package basic;
 
 public class Exercise08 {
-    String[] romanNumerals = {
+    private static final String[] romanNumerals = {
             "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"
     };
 
-    int[] values = {
+    private static final int[] values = {
             1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1
     };
 
@@ -14,7 +14,7 @@ public class Exercise08 {
             throw new IllegalArgumentException("Number out of range (1-3999)");
         }
 
-        StringBuilder roman = new StringBuilder();
+        final StringBuilder roman = new StringBuilder();
 
         for (int i = 0; i < values.length; i++) {
             while (number >= values[i]) {
