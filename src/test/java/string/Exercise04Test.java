@@ -12,7 +12,8 @@ public class Exercise04Test {
         assertEquals("a3b2c", exercise04.cutString("aaabbc"));
         assertEquals("abc", exercise04.cutString("abc"));
         assertEquals("a5", exercise04.cutString("aaaaa"));
-        assertEquals("a2b2", exercise04.cutString("abab"));
+        assertEquals("abab", exercise04.cutString("abab"));
+        assertEquals("a4b4a2b2", exercise04.cutString("aaaabbbbaabb"));
         assertEquals("", exercise04.cutString(""));
         assertEquals("ab13c", exercise04.cutString("abbbbbbbbbbbbbc"));
     }
