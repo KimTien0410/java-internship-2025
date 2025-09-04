@@ -1,0 +1,4 @@
+16. Từ khoá static dùng để làm gì, tại sao từ một static method, ta không thể truy cập được đến non-static method
+> -Từ khoá **static** được sử dụng ể chỉ ra rằng một thành phần thuộc về lớp chứa nó, chứ không phải thuộc về một đối tượng cụ thể nào của lớp đó. Điều này có nghĩa là các đối tượng của lớp chia sẻ chung một bản sao của thành phần static và không cần phải tạo đối tượng mới để truy cập nó.
+> - Trong Java, không thể trực tiếp gọi một phương thức non-static từ một phương thức static. Điều này là do phương thức static không phụ thuộc voà bất kỳ đối tượng nào của lớp, trong khi phương thức không static yêu cầu một đối tượng của lớp để gọi nó.
+> - Để gọi một phương thức non-static trong một phương trình static, chúng ta phải sử dụng một thực thể (đối tượng) của lớp chưa phương thức non-static. Đây là trường hợp phổ biến khi gọi một phương thức không static từ phương thức main() static.
