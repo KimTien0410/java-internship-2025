@@ -1,31 +1,242 @@
 18. Tìm hiểu, giải thích Design Pattern là gì và giải thích mục đích/ý nghĩa của vài pattern (tuỳ chọn)
-=> Design Pattern là các giải pháp tổng thể đã được tối ưu hoá, được tái sử dugnj cho các vấn đề phổ biến trong thiết kế phần mềm mà chúng ta thường gặp phải hàng ngày.
-- Design patterns là một kỹ thuật trong lập trình hướng đối tượng, không phải là một ngôn ngữ cụ thể nào cả, nó là một kỹ thuật lập trình. Nó cung cấp cho chúng ta các "mẫu thiết kế" để giải quyết các vấn đề phổ biến trong phát triển phần mềm.
-- Design pattern giúp giải quyết vấn đề một cách tối ưu nhất, cung cấp cho bạn các giải pháp trong lập tình OOP.
-- Design pattern giúp bạn tái sử dụng code, giảm thiểu sự trùng lặp trong code, giúp code của bạn dễ bảo trì và mở rộng hơn.
-- Design pattern giúp bạn giao tiếp tốt hơn với các lập trình viên khác, vì nó cung cấp cho bạn một ngôn ngữ chung để thảo luận về các giải pháp thiết kế.
-- Design pattern giúp bạn viết code dễ đọc và dễ hiểu hơn, vì nó cung cấp cho bạn các cấu trúc và quy ước rõ ràng để tổ chức code của bạn.
-- Design pattern giúp bạn tiết kiệm thời gian và công sức trong việc thiết kế phần mềm, vì bạn không cần phải tự mình phát minh ra các giải pháp từ đầu.
-- Design pattern giúp bạn nâng cao kỹ năng lập trình của mình, vì nó yêu cầu bạn phải hiểu rõ các nguyên tắc và khái niệm cơ bản của lập trình hướng đối tượng.
-- Design pattern giúp bạn tạo ra các ứng dụng linh hoạt và dễ mở rộng hơn, vì nó khuyến khích bạn sử dụng các nguyên tắc thiết kế như SOLID và DRY.
-- Design pattern giúp bạn tạo ra các ứng dụng dễ kiểm thử hơn, vì nó khuyến khích bạn sử dụng các nguyên tắc thiết kế như Dependency Injection và Inversion of Control.
+> **Design Pattern** là một giải pháp có thể tái sử dụng để xử lý các vấn đề diễn ra trong thiết kế phần mềm. Chúng thực ra giống như hình mẫu hoặc khuôn mẫu rằng bạn có thể áp dụng (customize) và sử dụng để giải quyết một thiết kế cụ thể trong code của bạn<br/>
+> Bản thân chúng không phải là mã, chúng mô tả cách tốt nhất rằng có thể áp dụng để giải quyết vấn đề thường xuyên diễn ra trong thiết kế phần mềm đặc biệt trong lập trình hướng đối tượng trong Java.<br/><br/>
+> **Lợi ích của Design Pattern**:
+> - Tăng tính tái sử dụng(Reusability): Những giải pháp có thể áp dụng lại trong nhiều vấn đề giống nhau thông qua các dự án khác nhau.
+> - Giao tiếp tốt hơn(Communication): Cung cấp một từ vựng chung cho lập trình viên
+> - Luyện tập tốt nhất(Best Practices): Sử dụng các giải pháp đã được kiểm chứng (proven) và tiêu chuẩn coding (coding standards)
+> - Dễ bảo trì(Mainntainability): Giúp code có tổ chức và dễ để chỉnh sửa.(Make code more organized and easier to modify)
+> - Linh hoạt(Flexibility): Cho phép dễ áp dụng để thay đổi các yêu cầu.(Allows for easier adaptation to changing requirements).
+> **Tại sao nên học Design Pattern trong Java**:
+> - Bản chất (nature) lập trình hướng đối tượng trong Java làm nó hoàn hảo để áp dụng các Design Pattern.
+> - Sử dụng trong các Framework như Spring, Hibernate, và Java Collections.
+> - Giúp trong việc phỏng vấn và phát triển phần mềm quy mô lớn (large - scale).
+>> **Type of Design Patern**:
+> - **Creational Patterns**: Những khuôn mẫu giải quyết các vấn đề liên quan đến việc tạo đối tượng, cố gắng(trying to) tạo một đối tượng trong một cách phù hợp với tình huống. Nó giúp làm một hệ thống độc lập với cách nó tao đối tượng, composed( sáng tác, bình tĩnh), và represented(đại diện). Ví dụ: Singleton, Factory Method, Abstract Factory, Builder, Prototype.
+> - **Structural Patterns**: Những khuôn mẫu giải quyết thành phần(cữaomposition) đối tượng và mối quan hệ giữa các đối tượng. Họ giúp nó làm dễ để cấu trúc(structure) các classes và đối tượng trong một cách làm duy trì code đơn giản(simplifeies code maintenance) và cải thiện độ linh hoạt(improves flexibility). Ví dụ: Adapter, Decorartor, Facade, Composite.
+> - **Behavioral Patterns**: Những khuôn mẫu tập trung vào giao tiếp giữa các đối tượng và phân công trách nhiệm (assignment of responsibilities). Chúng giúp quản lý cách đi tượng tương tác trong một hệ thống, làm nó hiệu quả và dễ dàng để chỉnh sửa (easier to modify). Ví dụ: Observer, Strategy, Command, Template Method.
+>
+> **Design Pattern phổ biến trong Java**:
+> - **Singleton Pattern (Creational)**: đảm bảo rằng một lớp chỉ có duy nhất một thể hiện và cung cấp truy cấp toàn cầu đến nó(provides global access to it). Nó cho phép tạo đối tượng để tránh nhiều thể hiện và đảm bảo rằng luôn luôn (consistent) truy cập để chia sẻ tài nguyên.
+<br/> **Khi nào sử dụng (when to use)**: Khi bạn cần chính xác một thể hiện của một class (ví dụ: Kết nối database connection , logger).
+<br/>**Ví dụ (example)**:
+```java
+class Singleton {
+    // Private static instance
+    private static Singleton instance;
+    
+    // Private constructor to prevent instantiation
+    private Singleton() {
+        // Initialization code
+    }
+    
+    // Public method to get the instance. If instance is not null, new will not be initialized.
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+    
+    public void displayMessage() {
+        System.out.println("Hello from Singleton!");
+    }
+}
 
-** Design pattern có thể được chia thành 3 loại chính: Creational, Structural và Behavioral. Mỗi loại có các pattern cụ thể như sau:
-1. Creational Patterns: Tập trung vào việc tạo đối tượng một cách hiệu quả và linh hoạt.
-   - Singleton: Đảm bảo một lớp chỉ có một thể hiện duy nhất và cung cấp một điểm truy cập toàn cục đến nó.
-   - Factory Method: Cung cấp một giao diện để tạo đối tượng trong siêu lớp, nhưng cho phép các lớp con quyết định lớp nào sẽ được khởi tạo.
-   - Abstract Factory: Cung cấp một giao diện để tạo các họ đối tượng liên quan hoặc phụ thuộc mà không cần chỉ định lớp cụ thể của chúng.
-   - Builder: Tách quá trình xây dựng một đối tượng phức tạp khỏi biểu diễn của nó, cho phép cùng một quá trình xây dựng có thể tạo ra các biểu diễn khác nhau.
-   - Prototype: Cho phép sao chép các đối tượng hiện có mà không cần biết chi tiết về cách chúng được tạo ra.
-2. Structural Patterns: Tập trung vào việc tổ chức các lớp và đối tượng để tạo ra các cấu trúc lớn hơn.
-   - Adapter: Cho phép các giao diện không tương thích làm việc cùng nhau bằng cách chuyển đổi giao diện của một lớp thành giao diện mà khách hàng mong đợi.
-   - Composite: Tổ chức các đối tượng thành cấu trúc cây để biểu diễn quan hệ phần-tổng thể, cho phép khách hàng xử lý các đối tượng riêng lẻ và các nhóm đối tượng một cách đồng nhất.
-   - Proxy: Cung cấp một đại diện hoặc thay thế cho một đối tượng khác để kiểm soát truy cập đến nó.
-   - Decorator: Thêm chức năng bổ sung vào một đối tượng một cách động mà không làm thay đổi cấu trúc của nó.
-   - Facade: Cung cấp một giao diện đơn giản hơn cho một hệ thống phức tạp, giúp giảm sự phụ thuộc giữa các phần của hệ thống.
-3. Behavioral Patterns: Tập trung vào việc quản lý các tương tác và trách nhiệm giữa các đối tượng.
-   - Observer: Định nghĩa một phụ thuộc một-nhiều giữa các đối tượng sao cho khi một đối tượng thay đổi trạng thái, tất cả các đối tượng phụ thuộc của nó sẽ được thông báo và cập nhật tự động.
-   - Strategy: Định nghĩa một họ các thuật toán, đóng gói từng thuật toán và làm cho chúng có thể hoán đổi cho nhau. Strategy cho phép thuật toán thay đổi độc lập với khách hàng sử dụng nó.
-   - Command: Đóng gói một yêu cầu dưới dạng một đối tượng, cho phép bạn tham số hóa các khách hàng với các yêu cầu khác nhau, xếp hàng hoặc ghi lại các yêu cầu, và hỗ trợ các hoạt động có thể hoàn tác.
-   - Chain of Responsibility: Truyền một yêu cầu dọc theo một chuỗi các đối tượng xử lý cho đến khi một đối tượng xử lý nó. Mỗi đối tượng trong chuỗi có thể chọn xử lý yêu cầu hoặc chuyển nó cho đối tượng tiếp theo trong chuỗi.
-   - State: Cho phép một đối tượng thay đổi hành vi của nó khi trạng thái nội bộ của nó thay đổi. Đối tượng sẽ xuất hiện như thể nó đã thay đổi lớp của nó.
+public class Main {
+    public static void main(String[] args) {
+        Singleton s1 = Singleton.getInstance();
+        Singleton s2 = Singleton.getInstance();
+        
+        s1.displayMessage();
+        System.out.println(s1 == s2); // true - same instance
+    }
+}
+```
+> - **Factory Method Pattern (Creational)**: tạo đối tượng với không cần phải chỉ định chính xác lớp của chúng, thúc đẩy(promoting) loose coupling. Nó đóng gói(encapsulate) việc tạo đối tượng đúng logic, làm cide dễ bảo trì v mở rộng (scalable).<br/>
+   **When to use**: Khi bạn cần tạo đối tượng dựa trên điều kiện hoặc các tham số(parameters) chắc chắn(certain).<br/> 
+   **Example**:
+```java
+// Product interface
+interface Animal {
+    void makeSound();
+}
+
+// Concrete products
+class Dog implements Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Woof!");
+    }
+}
+
+class Cat implements Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Meow!");
+    }
+}
+
+// Factory class
+class AnimalFactory {
+    public static Animal createAnimal(String type) {
+        switch (type.toLowerCase()) {
+            case "dog":
+                return new Dog();
+            case "cat":
+                return new Cat();
+            default:
+                throw new IllegalArgumentException("Unknown animal type");
+        }
+    }
+}
+
+// Usage
+public class Main {
+    public static void main(String[] args) {
+        Animal dog = AnimalFactory.createAnimal("dog");
+        Animal cat = AnimalFactory.createAnimal("cat");
+        
+        dog.makeSound(); // Woof!
+        cat.makeSound(); // Meow!
+    }
+}
+```
+> - **Observer Pattern (Behavioral)**: Định nghĩa sự phụ thuộc một nhiều giữa các đối tượng vì vậy khi một đối tượng thay đổi tình trạng, tất cả sự phụ thuộc là được thông báo tự động.
+<br/>**When to use**: Khi thay đổi một đối tượng yêu cầu cập nhật nhiều đối tượng phụ thuộc.
+<br/>**Example**:
+```java
+import java.util.*;
+
+// Observer interface
+interface Observer {
+    void update(String message);
+}
+
+// Subject interface
+interface Subject {
+    void addObserver(Observer observer);
+    void removeObserver(Observer observer);
+    void notifyObservers(String message);
+}
+
+// Concrete Subject
+class NewsAgency implements Subject {
+    private List<Observer> observers = new ArrayList<>();
+    private String news;
+    
+    @Override
+    public void addObserver(Observer observer) {
+        observers.add(observer);
+    }
+    
+    @Override
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
+    }
+    
+    @Override
+    public void notifyObservers(String message) {
+        for (Observer observer : observers) {
+            observer.update(message);
+        }
+    }
+    
+    public void setNews(String news) {
+        this.news = news;
+        notifyObservers(news);
+    }
+}
+
+// Concrete Observer
+class NewsChannel implements Observer {
+    private String name;
+    
+    public NewsChannel(String name) {
+        this.name = name;
+    }
+    
+    @Override
+    public void update(String message) {
+        System.out.println(name + " received news: " + message);
+    }
+}
+
+// Usage
+public class Main {
+    public static void main(String[] args) {
+        NewsAgency agency = new NewsAgency();
+        
+        NewsChannel channel1 = new NewsChannel("CNN");
+        NewsChannel channel2 = new NewsChannel("BBC");
+        
+        agency.addObserver(channel1);
+        agency.addObserver(channel2);
+        
+        agency.setNews("Breaking: New Java version released!");
+    }
+}
+```
+> - **Strategy Pattern(Behavioral)**: định nghĩa một gia đình(family) của các thuật toán, đóng gói một một và làm chúng có thể hoán đổi cho nhau(interchangable).<br/>
+    **When to use**: Khi bạn có nhiều thuật toán cho một nhiệm vụ cụ thể và muốn chọn một trong số chúng tại runtime.<br/>
+    **Example**:
+```java
+import java.util.*;
+
+// Strategy interface
+interface SortingStrategy {
+    void sort(int[] array);
+}
+
+// Concrete strategies
+class BubbleSort implements SortingStrategy {
+    @Override
+    public void sort(int[] array) {
+        System.out.println("Sorting using Bubble Sort");
+        // Implementation would go here
+        Arrays.sort(array); // Using built-in for simplicity
+    }
+}
+
+class QuickSort implements SortingStrategy {
+    @Override
+    public void sort(int[] array) {
+        System.out.println("Sorting using Quick Sort");
+        // Implementation would go here
+        Arrays.sort(array); // Using built-in for simplicity
+    }
+}
+
+// Context class
+class SortingContext {
+    private SortingStrategy strategy;
+    
+    public void setStrategy(SortingStrategy strategy) {
+        this.strategy = strategy;
+    }
+    
+    public void executeStrategy(int[] array) {
+        strategy.sort(array);
+    }
+}
+
+// Usage
+public class Main {
+    public static void main(String[] args) {
+        int[] data = {5, 2, 8, 1, 9};
+        SortingContext context = new SortingContext();
+        
+        // Use bubble sort
+        context.setStrategy(new BubbleSort());
+        context.executeStrategy(data);
+        
+        // Switch to quick sort
+        context.setStrategy(new QuickSort());
+        context.executeStrategy(data);
+    }
+}
+```
+```from geeksforgeeks.org :```<a href="https://www.geeksforgeeks.org/system-design/design-patterns-in-java/">Design Pattern - GeeksforGeeks</a>
+
+
+
